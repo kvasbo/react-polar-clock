@@ -742,7 +742,7 @@ var defaultColors = {
 };
 
 PolarClock.defaultProps = {
-  backgroundColor: "#000000",
+  backgroundColor: "#000",
   size: 300,
   colors: {},
   interval: 25

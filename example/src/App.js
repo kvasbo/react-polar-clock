@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Polar colors={{ seconds: '#FF0', minutes: '#00F' }} />
+        <Polar colors={{ seconds: '#FF0', minutes: '#00F', hours: '#F0F', weekday: '#0FF', month: '#0F0', date: '#F00' }} />
       </div>
     );
   }
