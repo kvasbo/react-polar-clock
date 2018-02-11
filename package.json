@@ -1,6 +1,6 @@
 {
-  "name": "react-polar",
-  "version": "0.0.1",
+  "name": "react-polar-clock",
+  "version": "1.0.0",
   "description": "Polar clock for React",
   "main": "build/index.js",
   "peerDependencies": {
@@ -16,10 +16,7 @@
     "start": "webpack --watch",
     "build": "webpack"
   },
-  "author": {
-    "name": "Audun Kvasbø",
-    "email": "audun@kvasbo.no"
-  },
+  "author": "Audun Kvasbø <audun@kvasbo.no>",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
@@ -27,5 +24,23 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvasbo/react-polar-clock.git"
+  },
+  "keywords": [
+    "react",
+    "polar",
+    "clock",
+    "canvas"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kvasbo/react-polar-clock/issues"
+  },
+  "homepage": "https://github.com/kvasbo/react-polar-clock#readme"
 }

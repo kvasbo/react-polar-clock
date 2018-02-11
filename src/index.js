@@ -25,12 +25,10 @@ const defaultColors = {
   month: "#999" 
 }
 
-
 PolarClock.defaultProps = {
-  backgroundColor: "#000000",
+  backgroundColor: "#000",
   size: 300,
-  colors: {
-  },
+  colors: {},
   interval: 25
 }
 
