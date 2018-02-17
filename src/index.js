@@ -20,7 +20,6 @@ const defaultColors = {
   seconds: "#444",
   minutes: "#555",
   hours: "#666",
-  weekday: "#777",
   date: "#888",
   month: "#999" 
 }

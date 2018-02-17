@@ -464,9 +464,12 @@ var Clock = function Clock(canvas, size, colors, interval) {
   _classCallCheck(this, Clock);
 
   this.canvas = canvas;
-  var point = new Point(size, size, size * 0.9);
-  this.clock = new PolarClock(canvas, point, 15, 2);
-  this.clock.color = [colors.seconds, colors.minutes, colors.hours, colors.weekday, colors.date, colors.month];
+  var radius = Math.max(0, size - 20);
+  var linesize = size * 0.1;
+  var margin = size * 0.01;
+  var point = new Point(size, size, radius);
+  this.clock = new PolarClock(canvas, point, linesize, margin);
+  this.clock.color = [colors.seconds, colors.minutes, colors.hours, colors.date, colors.month];
   this.clock.start(interval);
 };
 
@@ -498,7 +501,7 @@ var PolarClock = function PolarClock(canvas, point, line, margin, color) {
   this.point = point;
   this.line = line;
   this.margin = margin;
-  this.color = color || ["#333", "#555", "#777", "#999", "#BBB", "#DDD"];
+  this.color = color || ["#333", "#555", "#777", "#999", "#BBB"];
 };
 
 /**
@@ -543,9 +546,9 @@ PolarClock.prototype.step = function (point) {
   if (color[0]) this.draw(0, point, now.second);
   if (color[1]) this.draw(1, point, now.minute);
   if (color[2]) this.draw(2, point, now.hour);
-  if (color[3]) this.draw(3, point, now.weekday);
-  if (color[4]) this.draw(4, point, now.date);
-  if (color[5]) this.draw(5, point, now.month);
+  // if (color[3]) this.draw(3, point, now.weekday);
+  if (color[3]) this.draw(3, point, now.date);
+  if (color[4]) this.draw(4, point, now.month);
 };
 
 /**
@@ -736,7 +739,6 @@ var defaultColors = {
   seconds: "#444",
   minutes: "#555",
   hours: "#666",
-  weekday: "#777",
   date: "#888",
   month: "#999"
 };

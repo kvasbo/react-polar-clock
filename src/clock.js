@@ -1,9 +1,12 @@
 export default class Clock {
   constructor(canvas, size, colors, interval) {
     this.canvas = canvas;
-    const point = new Point(size, size, (size * 0.9));
-    this.clock = new PolarClock(canvas, point, 15, 2);
-    this.clock.color = [colors.seconds, colors.minutes, colors.hours, colors.weekday, colors.date, colors.month];
+    const radius = Math.max(0, size-20);
+    const linesize = size * 0.1;
+    const margin = size * 0.01;
+    const point = new Point(size, size, radius);
+    this.clock = new PolarClock(canvas, point, linesize, margin);
+    this.clock.color = [colors.seconds, colors.minutes, colors.hours, colors.date, colors.month];
     this.clock.start(interval);
   }
 }
@@ -33,7 +36,7 @@ var PolarClock = function (canvas, point, line, margin, color) {
   this.point = point;
   this.line = line;
   this.margin = margin;
-  this.color = color || ["#333", "#555", "#777", "#999", "#BBB", "#DDD"];
+  this.color = color || ["#333", "#555", "#777", "#999", "#BBB"];
 };
 
 /**
@@ -78,9 +81,9 @@ PolarClock.prototype.step = function(point) {
   if (color[0]) this.draw(0, point, now.second);
   if (color[1]) this.draw(1, point, now.minute);
   if (color[2]) this.draw(2, point, now.hour);
-  if (color[3]) this.draw(3, point, now.weekday);
-  if (color[4]) this.draw(4, point, now.date);
-  if (color[5]) this.draw(5, point, now.month);
+  // if (color[3]) this.draw(3, point, now.weekday);
+  if (color[3]) this.draw(3, point, now.date);
+  if (color[4]) this.draw(4, point, now.month);
 };
 
 /**

@@ -1,14 +1,14 @@
 {
   "name": "react-polar-clock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Polar clock for React",
   "main": "build/index.js",
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^16.0.0"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react": "^15.5.4",
+    "react": "^16.0.0",
     "webpack": "^2.6.1"
   },
   "scripts": {
