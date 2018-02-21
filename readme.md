@@ -2,6 +2,8 @@ A simple polar clock for React.
 
 Based on https://codepen.io/pankajparashar/pen/sIpyw
 
+![screen shot](https://raw.githubusercontent.com/kvasbo/react-polar-clock/master/docs/screenshot.png)
+
 Set colors:
 ```javascript
 <Polar colors={{
