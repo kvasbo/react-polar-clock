@@ -1,6 +1,8 @@
+[![NPM version](https://badge.fury.io/js/react-polar-clock.svg)](http://badge.fury.io/js/react-polar-clock)
+
 A simple polar clock for React.
 
-Based on https://codepen.io/pankajparashar/pen/sIpyw
+Based on https://codeen.io/pankajparashar/pen/sIpyw
 
 ![screen shot](https://raw.githubusercontent.com/kvasbo/react-polar-clock/master/docs/screenshot.png)
 
